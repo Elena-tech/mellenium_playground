@@ -1,0 +1,27 @@
+/* Import Google Fonts (Prata) */
+@import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
+
+/* CSS Variables */
+:root {
+  --primary-color: #0032ff;
+  --secondary-color: #071945;
+  --tertiary-color: #eaf3f8;
+  --emphasis-color: #20caa6;
+  --black: rgb(0, 0, 0);
+  --white: rgb(255, 255, 255);
+  --blue: #0032ff;
+}
+
+/* Global resets and typography */
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}

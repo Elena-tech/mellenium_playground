@@ -1,0 +1,127 @@
+.footer {
+  background-color: #fff;
+  padding: 4rem 2rem;
+  color: #000;
+  font-family: "nimbus-sans", sans-serif; /* Or your chosen font */
+}
+
+/* 
+  ============ TOP GRID (Desktop) ============
+  By default, 6 columns for large screens.
+  If your screen is truly wide, it won't collapse into a single column.
+*/
+.linkGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 6 equal columns */
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* Headings for categories: Approach, People, Careers, etc. */
+.linkGrid h4 {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  color: rgb(0, 50, 255); /* Bright Millennium blue */
+  font-weight: 600;
+}
+
+/* Sub-links under each heading */
+.linkGrid ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.linkGrid li {
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  color: #000;
+  transition: color 0.2s ease;
+}
+
+.linkGrid li:hover {
+  color: rgb(0, 50, 255);
+}
+
+/* Right column: Terms, Privacy, etc. + Social Icons */
+.rightLinks {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.socialIcons {
+  margin-top: 1rem;
+}
+.socialIcons a {
+  margin-right: 1rem;
+  text-decoration: none;
+  color: rgb(0, 50, 255);
+  font-weight: 500;
+}
+.socialIcons a:hover {
+  color: #0020aa;
+}
+
+/* ============ BOTTOM BRAND ROW ============ */
+.brandRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  font-size: 3rem;
+  font-weight: 700;
+  color: rgb(0, 50, 255);
+  text-transform: lowercase;
+}
+
+.copy {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* 
+  ============ RESPONSIVE BREAKPOINTS ============
+  At screens narrower than 992px, switch to 3 columns.
+  At screens narrower than 576px, go single column.
+*/
+
+/* 3 columns for tablets, ~under 992px wide */
+@media (max-width: 992px) {
+  .linkGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  /* Possibly stack brand & copy if you like */
+  .brandRow {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+/* Single column for mobile, under 576px wide */
+@media (max-width: 576px) {
+  .linkGrid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Add spacing between each block when stacked */
+  .linkGrid > div {
+    margin-bottom: 2rem;
+  }
+
+  /* Move the rightLinks to the bottom of the stack */
+  .rightLinks {
+    order: 99;
+    margin-top: 2rem;
+  }
+
+  /* The brand row also stacks vertically */
+  .brandRow {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}

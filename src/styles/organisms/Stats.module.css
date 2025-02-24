@@ -1,0 +1,43 @@
+.statsSection {
+  padding: 4rem 2rem;
+  max-width: 800px; /* narrower if you want a single column */
+  margin: 0 auto;
+  font-family: "nimbus-sans", sans-serif;
+  color: rgb(0, 50, 255);
+}
+
+/* Intro paragraph above the stats */
+.intro {
+  font-size: 34px;
+  line-height: 51px;
+  margin-bottom: 3rem;
+}
+
+/* Stats container: single column always */
+.statsGrid {
+  display: grid;
+  grid-template-columns: 1fr; /* single column */
+  gap: 2rem;
+}
+
+/* Each stat row with a bottom border */
+.statItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgb(0, 50, 255);
+}
+
+.value {
+  font-family: "Prata", serif;
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.label {
+  font-size: 20px;
+  text-transform: uppercase;
+  line-height: 1;
+}

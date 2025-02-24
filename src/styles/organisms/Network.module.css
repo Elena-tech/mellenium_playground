@@ -1,0 +1,59 @@
+.networkSection {
+  position: relative;
+  width: 100%;
+  min-height: 60vh; /* or however tall you want it */
+  background: url("/path/to/background.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.overlay {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.4
+  ); /* dark overlay if you want text to stand out */
+  color: #fff;
+  padding: 3rem;
+  border-radius: 8px;
+}
+
+.overlay h2 {
+  font-family: "Prata", serif;
+  font-size: 48px;
+  margin-bottom: 1rem;
+}
+
+.overlay p {
+  font-family: "nimbus-sans", sans-serif;
+  font-size: 20px;
+  margin-bottom: 2rem;
+}
+
+.ctaButton {
+  font-family: "nimbus-sans", sans-serif;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.ctaButton:hover {
+  background-color: #0020aa;
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+  .overlay h2 {
+    font-size: 2rem;
+  }
+  .overlay p {
+    font-size: 1rem;
+  }
+}

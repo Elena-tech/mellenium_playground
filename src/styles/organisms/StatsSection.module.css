@@ -1,0 +1,86 @@
+.statsSection {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: var(--tertiary-color); /* or white, if you prefer */
+}
+
+.intro {
+  /* Same Nimbus Sans style as hero paragraph, or tweak as needed */
+  font-family: "nimbus-sans", sans-serif;
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 51px;
+  color: rgb(0, 50, 255);
+  max-width: 900px;
+  margin: 0 auto 3rem;
+}
+
+.statsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.statCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.value {
+  font-family: "Prata", serif;
+  font-size: 48px;
+  font-weight: 400;
+  color: rgb(0, 50, 255);
+  margin-bottom: 0.25rem;
+}
+
+.label {
+  font-family: "nimbus-sans", sans-serif;
+  font-size: 20px;
+  line-height: 1.2;
+  color: rgb(0, 50, 255);
+}
+
+.ctaButton {
+  font-family: "nimbus-sans", sans-serif;
+  font-size: 20px;
+  color: rgb(0, 50, 255);
+  border: 2px solid rgb(0, 50, 255);
+  background-color: transparent;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.ctaButton:hover {
+  background-color: rgb(0, 50, 255);
+  color: var(--white);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .intro {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+
+  .statsContainer {
+    gap: 1.5rem;
+  }
+
+  .value {
+    font-size: 2rem;
+  }
+
+  .label {
+    font-size: 1rem;
+  }
+
+  .ctaButton {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+}
